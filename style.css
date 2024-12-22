@@ -17,9 +17,10 @@ body {
 }
 
 .display {
+  overflow-x: scroll !important;
   width: 95%;
   height: 60px;
-  font-size: 2em;
+  font-size: 4em;
   text-align: right;
   padding: 10px;
   margin-bottom: 10px;
@@ -27,6 +28,7 @@ body {
   background-color: #444;
   border: none;
   border-radius: 5px;
+  overflow: auto;
 }
 
 .buttons {

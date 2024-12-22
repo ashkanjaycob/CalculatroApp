@@ -10,11 +10,31 @@ function appendNumber(number) {
 }
 
 function delteNumber() {
-    currentInput = currentInput.trim().slice(0, -1);
-    console.log(currentInput); 
-    updateDisplay();
+  currentInput = currentInput.trim().slice(0, -1);
+  console.log(currentInput);
+  updateDisplay();
 }
 
 function updateDisplay() {
   resultField.value = currentInput || "0";
+}
+
+function clearResult() {
+  currentInput = "";
+  updateDisplay();
+}
+
+function appendOperation(op) {
+  if (currentInput === "") return;
+  currentInput += ` ${op} `;
+  updateDisplay();
+}
+
+function calculate() {
+  try {
+    currentInput = eval(currentInput.replace("%", "/100")).toString();
+  } catch {
+    currentInput = "Error";
+  }
+  updateDisplay();
 }

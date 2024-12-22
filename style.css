@@ -49,3 +49,28 @@ button {
 button:hover {
   background-color: #666;
 }
+
+.operator {
+    border: 1px solid #007bff;
+    font-size: 2rem;
+}
+
+.operator:hover {
+  background-color: #0057b369;
+}
+
+.clear {
+    border: 1px solid #FF5733;
+}
+
+.clear:hover {
+    background-color: #ff58337e;
+}
+
+.equals {
+    border: 1px solid #01ffb3;
+}
+
+.equals:hover {
+    background-color: #01ffb38c;
+}

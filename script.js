@@ -25,8 +25,13 @@ function clearResult() {
 }
 
 function appendOperation(op) {
-  if (currentInput === "") return;
-  currentInput += ` ${op} `;
+  if (/[+\-*%/] $/.test(currentInput)) {
+    currentInput = currentInput.slice(0, -3) + ` ${op} `;
+  } else {
+    if (currentInput !== "") {
+      currentInput += ` ${op} `;
+    }
+  }
   updateDisplay();
 }
 

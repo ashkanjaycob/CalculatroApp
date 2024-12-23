@@ -34,7 +34,7 @@ function calculate() {
   try {
     currentInput = eval(currentInput.replace("%", "/100")).toString();
   } catch {
-    currentInput = "Error";
+    currentInput = "";
   }
   updateDisplay();
 }

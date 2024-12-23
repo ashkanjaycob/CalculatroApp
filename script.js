@@ -43,3 +43,11 @@ function calculate() {
   }
   updateDisplay();
 }
+
+// toggle between + & -
+function toggleSign() {
+  if (currentInput && !isNaN(currentInput)) {
+    currentInput = (parseFloat(currentInput) * -1).toString();
+    updateDisplay();
+  }
+}
